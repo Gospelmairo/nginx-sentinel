@@ -2,7 +2,7 @@
 
 **Server IP:** `<YOUR_SERVER_IP>`
 **Metrics Dashboard:** `http://<YOUR_SUBDOMAIN>`
-**GitHub Repo:** `https://github.com/Gospelmairo/hng14-stage3-devops`
+**GitHub Repo:** `https://github.com/Gospelmairo/nginx-sentinel`
 **Blog Post:** `<BLOG_URL>`
 
 ---
@@ -84,8 +84,8 @@ sudo apt-get install -y docker.io docker-compose-plugin
 sudo systemctl enable --now docker
 
 # 2. Clone repo
-git clone https://github.com/Gospelmairo/hng14-stage3-devops.git
-cd hng14-stage3-devops
+git clone https://github.com/Gospelmairo/nginx-sentinel.git
+cd nginx-sentinel
 
 # 3. Configure
 cp detector/config.yaml detector/config.yaml.local
