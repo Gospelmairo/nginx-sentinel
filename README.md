@@ -1,4 +1,4 @@
-# HNG Stage 3 — Anomaly Detection Engine
+# Anomaly Detection Engine
 
 **Server IP:** `<YOUR_SERVER_IP>`
 **Metrics Dashboard:** `http://<YOUR_SUBDOMAIN>`
@@ -9,7 +9,7 @@
 
 ## Language
 
-Python — chosen for fast iteration, strong stdlib support for threading and deques, and readable detection logic that can be audited at a glance.
+Python  chosen for fast iteration, strong stdlib support for threading and deques, and readable detection logic that can be audited at a glance.
 
 ---
 
@@ -41,7 +41,7 @@ No rate-limiting libraries are used — just deques and arithmetic.
 
 - **Window:** 30 minutes of per-second request counts.
 - **Recalculation:** Every 60 seconds, mean and stddev are recomputed from the window.
-- **Per-hour slots:** Counts are also stored by `(year, month, day, hour)` key. When the current hour slot has ≥ 10 data points, it is preferred over the full 30-minute window — this makes the baseline sensitive to time-of-day traffic patterns.
+- **Per-hour slots:** Counts are also stored by `(year, month, day, hour)` key. When the current hour slot has ≥ 10 data points, it is preferred over the full 30-minute window  this makes the baseline sensitive to time-of-day traffic patterns.
 - **Floor values:** stddev is floored at `0.1` to prevent division by zero. Mean below `0.001` suppresses all anomaly checks until baseline is established.
 
 ---
@@ -65,7 +65,7 @@ When a per-IP anomaly fires, the blocker runs:
 iptables -A INPUT -s <ip> -j DROP
 ```
 
-This adds a DROP rule to the INPUT chain — all subsequent packets from that IP are silently discarded at the kernel level before they reach Nginx or Nextcloud. On unban:
+This adds a DROP rule to the INPUT chain  all subsequent packets from that IP are silently discarded at the kernel level before they reach Nginx or Nextcloud. On unban:
 
 ```bash
 iptables -D INPUT -s <ip> -j DROP
