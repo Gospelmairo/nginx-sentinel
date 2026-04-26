@@ -114,6 +114,8 @@ class AnomalyDetector:
                 self._ip_error_windows[ip].add(ts)
             self._global_window.add(ts)
 
+        self._baseline.record(ts, is_error)
+
         self._check_ip(ip, ts)
         self._check_global(ts)
 
