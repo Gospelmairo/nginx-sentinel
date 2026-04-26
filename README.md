@@ -33,7 +33,7 @@ def rate(self) -> float:
     return len(self._ts) / self.window_seconds  # req/s
 ```
 
-No rate-limiting libraries are used — just deques and arithmetic.
+No rate-limiting libraries are used  just deques and arithmetic.
 
 ---
 
