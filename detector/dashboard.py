@@ -44,7 +44,7 @@ _HTML = """<!DOCTYPE html>
   </style>
 </head>
 <body>
-  <h1>&#x1F6E1; Traffic Sentinel — Anomaly Detection Engine</h1>
+  <h1>&#x1F6E1; Anomaly Detection Engine</h1>
   <p class="subtitle">Live dashboard &mdash; <span id="last-update">loading...</span></p>
 
   <div class="grid">
